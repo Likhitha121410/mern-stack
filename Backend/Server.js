@@ -6,6 +6,7 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 dotenv.config();
 const app = express();
+app.use(cors());
 connectDB();
 app.use(express.json())
 app.use("/api/todo",todoRoute)
