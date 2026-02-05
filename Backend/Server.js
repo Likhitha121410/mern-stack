@@ -3,6 +3,7 @@ const todoRoute = require('./Router/todoRouter');
 const dotenv=require("dotenv");
 const userRoute = require('./Router/userRouter');
 const connectDB = require('./config/db');
+const cors = require('cors');
 dotenv.config();
 const app = express();
 connectDB();
