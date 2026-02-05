@@ -2,10 +2,10 @@ const express = require('express')
 const todoRoute = require('./Router/todoRouter');
 const dotenv=require("dotenv");
 const userRoute = require('./Router/userRouter');
-
+const connectDB = require('./config/db');
 dotenv.config();
 const app = express();
-
+connectDB();
 app.use(express.json())
 app.use("/api/todo",todoRoute)
 app.use("/api/user",userRoute);
